@@ -1,0 +1,198 @@
+/*
+COLORS
+================================================ */
+:root {
+    --navy: #22305a;
+    --purple: #7a5af8;
+    --light-purple: #efeaff;
+    --green: #1f9d6b;
+    --red: #d9534f;
+    --grey: #333;
+    --light-grey: #9aa0ad;
+    --white: #fff;
+}
+
+* { 
+    box-sizing: border-box; 
+}
+
+/*
+일반 스타일
+================================================ */
+html {
+    font-size: 125%;
+}
+
+body {
+    /* 각도가 있는 그라데이션 */
+    background: linear-gradient(160deg, var(--light-purple), #fff1e6);
+
+    color: var(--grey);
+    font-family: "Noto Sans KR", sans-serif;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+h1 {
+    font-family: "Do Hyeon", "Noto Sans KR", sans-serif;
+    font-size: 2.5rem;
+    color: var(--navy);
+    text-align: center;
+    letter-spacing: .05em;
+}
+
+p {
+    line-height: 1.7;
+}
+
+
+/*
+게임 카드
+================================================ */
+.game {
+    max-width: 480px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    /* 그림자 */
+    box-shadow: 20px 10px 40px rgba(34, 48, 90, .18);
+
+}
+
+.game-sub {
+    color: var(--light-grey);
+    margin-bottom: 1.5rem;
+}
+
+.chances {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+.chance-count {
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 2.2rem;
+    color: var(--purple);
+    margin: 0 .2rem;
+}
+
+
+/*
+입력 영역
+================================================ */
+.guess-row {
+    display: flex;
+    gap: .5rem;
+    margin-bottom: 1.2rem;
+}
+
+.guess-input {
+    /* 입력 상자의 크기 */
+    flex: 1;
+    min-width: 0;
+    border: 2px solid var(--light-purple);
+    border-radius: 12px;
+    padding: .8rem 1rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: border-color .3s;
+    
+
+    border: 2px solid var(--light-purple);
+    border-radius: 12px;
+    padding: .8rem 1rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: border-color .3s;
+}
+
+.guess-input:focus {
+    /* 입력창을 선택했을 때의 모양 */
+    outline: none;
+    border-color: var(--purple);
+    
+}
+
+.guess-btn {
+    background: var(--purple);
+    color: var(--white);
+    border-radius: 12px;
+    padding: 0 1.6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background .3s;
+}
+
+.guess-btn:hover {
+    background: var(--navy);
+}
+
+/* 입력이 막힌 상태(disabled): 흐리게 + 클릭 금지 모양 */
+.guess-input:disabled,
+.guess-btn:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+
+}
+.guess-btn:disabled:hover {
+    background: var(--purple);
+}
+
+
+/*
+힌트·결과 메시지
+================================================ */
+.message {
+    min-height: 3.4rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+/* 결과에 따라 JavaScript가 win / lose 클래스를 붙인다 */
+.message.win {
+    color: var(--green);
+
+}
+
+.message.lose {
+    color: var(--red);
+}
+
+.tried {
+    color: var(--light-grey);
+    font-size: .95rem;
+    margin-top: .5rem;
+}
+
+
+/*
+다시 시작 버튼: 평소에는 숨김, .show 가 붙으면 표시
+================================================ */
+.restart-btn {
+    /* 평소에 버튼 숨김 */
+    display: none;
+    width: 100%;
+    margin-top: 1.2rem;
+    padding: .9rem;
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background .3s;
+}
+
+/* 다시 하기 버튼에 .show 가 붙으면 표시 */
+.restart-btn.show {
+    display: block;
+}
+
+
+.restart-btn:hover {
+    background: var(--purple);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Number Guess</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+        <link href="css/style.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <main class="game">
+            <h1>Number Guess</h1>
+            <p class="game-sub">1부터 100 사이의 숫자를 맞혀 보세요.<br>기회는 단 5번!</p>
+
+            <!-- 남은 기회: 숫자 부분(.chance-count)만 JavaScript가 바꾼다 -->
+            <p class="chances">남은 기회 <strong class="chance-count">5</strong>번</p>
+
+            <div class="guess-row">
+                <input class="guess-input" type="number" min="1" max="100" placeholder="1 ~ 100">
+                <button class="guess-btn" type="button">확인</button>
+            </div>
+
+            <!-- 힌트와 결과 메시지 -->
+            <p class="message">숫자를 입력하고 [확인]을 눌러 보세요.</p>
+
+            <!-- 지금까지 입력한 숫자 기록 -->
+            <p class="tried">입력한 숫자 : 없음</p>
+
+            <!-- 게임이 끝났을 때만 보이는 버튼 -->
+            <button class="restart-btn" type="button">다시 시작</button>
+        </main>
+
+        <!-- JavaScript -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
