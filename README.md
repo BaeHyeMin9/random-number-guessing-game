@@ -3,6 +3,10 @@
 웹기초프로그래밍 실습 프로그램으로 제작한 랜덤 숫자 맞추기 게임입니다.
 HTML, CSS, JavaScript를 활용하여 사용자 입력과 화면 변경, 이벤트 처리 등을 연습합니다.
 
+## 게임 실행
+
+[랜덤 숫자 맞추기 게임 바로 실행하기](https://baehyemin9.github.io/random-number-guessing-game/)
+
 ## 게임 방법
 
 1. 1부터 100 사이의 정수를 입력합니다.
